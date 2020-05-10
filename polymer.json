@@ -1,0 +1,34 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/my-app.html",
+  "fragments": [
+    "src/group-1.html",
+    "src/group-enrollment.html",
+    "src/home-page.html",
+    "src/register-login.html",
+    "src/not-found.html"
+  ],
+  "sources": [
+    "images/**/*",
+    "src/**/*"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "!bower_components/webcomponentsjs/gulpfile.js",
+    "manifest.json"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  },
+  "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    }
+  ]
+}
